@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaRegHeart } from "react-icons/fa";
 const Navbar = () => {
     return (
-        <div>
+        <div className='h-[100px] flex items-center justify-between shadow-md px-3'>
             <div>
-                <h1>Timeless Treasure</h1>
+                <Link to="/"><h1 className='font-medium text-2xl'>Timeless Treasure</h1></Link>
             </div>
-            <div>
-                <Link>Home</Link>
-                <Link>Shop</Link>
-                <Link>Blog</Link>
-                <Link>Page</Link>
-                <Link>Contact</Link>
+            <div className='flex gap-4'>
+                <Link className='text-lg'>Home</Link>
+                <Link className='text-lg'>Shop</Link>
+                <Link className='text-lg'>Blog</Link>
+                <Link className='text-lg'>Page</Link>
+                <Link className='text-lg'>Contact</Link>
             </div>
-            <div>
-                <Link><FaUser /></Link>
+            <div className='flex gap-2'>
+                <Link><FaUser className='text-lg text-yellow-300' /></Link>
+                <Link><FaRegHeart className='text-lg text-red-500' /></Link>
             </div>
         </div>
     );
